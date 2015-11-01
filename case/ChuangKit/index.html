@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="css/chuangKit-style.css">
 </head>
 
-<body>
+<body onload="page1Animation()">
 <div id="index_pageChose">
 	<div id="pageChose1" class="page1 pageChose adjustAuto active"></div>
   <div id="pageChose2" class="page2 pageChose adjustAuto"></div>
@@ -23,16 +23,17 @@
 </div>
 <div id="indexDiv">
   <div id="page1" class="indexPage row">
-    <div class="pageTopLight adjustAuto"></div>
-    <div class="pageLight adjustAuto"></div>
-    <div  id="page1Right" class="page1Right adjustAuto">
-      <div class="logo adjustAuto"><img src="img/logo_3577b0e.png" /></div>
-      <div class="page1text1 adjustAutoText">贴近你的创意</div>
-      <div class="page1text2 adjustAutoText">从未想象的简单与有趣，创客贴给你全新的线上设计体验，随时随地开启设计，呈现你的创意和想法。</div>
-      <a href="" id="login" class="login adjustAutoText">登&nbsp;&nbsp;&nbsp;录</a> 
-      <div id="chromeTip" class="adjustAutoText">为保证获得最佳体验，强烈推荐使用Chrome(谷歌)浏览器进行设计</div>  
+    <div class="pageTopDark"></div>
+    <div class="pageDark"></div>
+    <div  id="page1Right" class="shadeAuto">
+      <div class="fade-in"><img id="page1Logo" src="img/logo_3577b0e.png" /></div>
+      <div class="textAuto fade-in">
+        <p class="headline">贴近你的创意</p>
+        <p>从未想象的简单与有趣，创客贴给你全新的线上设计体验，随时随地开启设计，呈现你的创意和想法。</p>
+      </div>
+      <a href="" id="login" class="fade-in">登&nbsp;&nbsp;&nbsp;录</a> 
+      <div id="chromeTip" class="textAuto fade-in">为保证获得最佳体验，强烈推荐使用Chrome(谷歌)浏览器进行设计</div>  
     </div>
-    
   </div>
 
   <div id="page2" class="indexPage row">
@@ -98,11 +99,25 @@
   </div>
 </div>
 <script type="text/javascript">
-  //自调用时触发：适应屏幕高度
-  //窗口大小调整时触发：适应屏幕高度
-  (window.onresize=function() {
-    document.getElementById("indexDiv").style.height=window.innerHeight+"px";
-  })();
+'use strict';
+//自调用时触发：适应屏幕高度
+//窗口大小调整时触发：适应屏幕高度
+(window.onresize=function() {
+  document.getElementById("indexDiv").style.height=window.innerHeight+"px";
+})();
+//当page1Right页面被加载时
+function page1Animation() {
+  document.getElementById("page1Right").style.width="42%";
+  var labels=document.getElementById("page1Right").childNodes;
+  for (var i=0;i<labels.length;i++) {
+    if(labels[i].nodeName=="DIV" || labels[i].nodeName=="A"){
+    }//没用上
+    setTimeout(function(){labels[7].style.opacity="1";},300);
+    setTimeout(function(){labels[1].style.opacity="1";},500);
+    setTimeout(function(){labels[3].style.opacity="1";},700);
+    setTimeout(function(){labels[5].style.opacity="1";},900);
+  }
+};
 </script>
 <script type="text/javascript"></script>
 </body>
