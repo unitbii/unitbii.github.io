@@ -68,11 +68,11 @@ caption, th, td {
   vertical-align: middle; }
 a img {
   border: none; }
-/* Public style */
+/***** Public style *****/
 * {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0; }
-body {
+html, body {
   font-family: "Helvetica Neue", "Helvetica", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -96,8 +96,8 @@ a {
 a:hover {
   outline: 0;
   text-decoration: none;
-  -webkit-transition: color .25s, background .5s, opacity .25s;
-  transition: color .25s, background .5s, opacity .25s; }
+  -webkit-transition: color .25s, background .5s;
+  transition: color .25s, background .5s; }
 input, button {
   margin: 0;
   padding: 0; }
@@ -105,28 +105,48 @@ input::-moz-focus-inner, button::-moz-focus-inner {
   border: 0;
   padding: 0; }
 h1 {
-  font-size: 1.5em; }
-
-/*class style*/
-.pageTopLight {
+  font-size: 1.5rem; }
+/***** class style *****/
+/*页面上方的暗幕*/
+.pageTopDark {
   position: absolute;
   width: 100%;
-  height: 250px;
+  height: 30%;
   background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0.1), rgba(0,0,0,0));
 }
-.pageLight {
+/*整个页面的暗幕*/
+.pageDark {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.3);
 }
-
-
-/*id style*/
+/*p标签中的标题*/
+.headline {
+  font-size: 1.8rem;
+  font-family: "Microsoft YaHei";
+}
+/*默认文本*/
+.textAuto {
+  font-family: "SimSun";
+}
+/*淡入动画*/
+.fade-in {
+  opacity: 0;
+  -webkit-transition: color .25s, background .5s,opacity .5s;
+  transition: color .25s, background .5s,opacity .5s;
+}
+/*默认渐变*/
+.shadeAuto {
+  -webkit-transition: color .25s, background .5s,opacity .5s;
+  transition: color .25s, background .5s,opacity .5s;
+}
+/***** id style *****/
 #index_pageChose {
   position: absolute;
   top: 30%;
-  right: 3%;
+  right: 0;
+  width: 4%;
   z-index: 10;
 }
 #pageChose1, 
@@ -137,7 +157,7 @@ h1 {
 #pageChose6 {
   width: 10px;
   height: 10px;
-  margin: 30px 0;
+  margin: 50% 0;
   background-color: #888;
   border-radius: 5px;
 }
@@ -159,24 +179,42 @@ h1 {
 #page1Right {
   position: absolute;
   right: 0;
-  width: 43%;
+  width: 2%;
   height: 100%;
-  background-color: rgba(30,30,30,0.3);
+  background-color: rgba(0,0,0,0.3);
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
 }
 #page1Right > * {
-  margin: 0 16% 0 10%;
+  margin: 5% 16% 0 12%;
+}
+#page1Logo {
+  width: 60%;
+  margin: 30% 0 0;
 }
 #login {
   color: #2cc;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   text-align: center;
   display: block;
-  padding: 6px;
-  margin: 30px 0;
+  padding: 0.4rem;
   width: 40%;
   border:2px solid #2cc;
 }
-@media screen and (min-width: 44em) {
+#login:hover {
+  color: #fff;
+  background-color: rgba(22,166,166,0.5);
 }
-@media screen and (max-width: 44em) {
+#chromeTip {
+  color: #aaa;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 6%;
+  left: -8%;
+}
+@media screen and (min-width: 42em) {
+  
+}
+@media screen and (max-width: 42em) {
+  html, body {font-size: 12px;}
 }
