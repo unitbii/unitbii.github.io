@@ -68,15 +68,17 @@ caption, th, td {
   vertical-align: middle; }
 a img {
   border: none; }
-/* Public style */
+/***** Public style *****/
 * {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0; }
-body {
+html, body {
   font-family: "Helvetica Neue", "Helvetica", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
   color: #606c71; }
+@media screen and (min-width: 42em) {
+  html, body {font-size: 16px;line-height: 1.5; } }
+@media screen and (max-width: 42em) {
+  html, body {font-size: 12px;line-height: 1.3; } }
 iframe {
   margin-top: 10px; }
 small {
@@ -96,8 +98,8 @@ a {
 a:hover {
   outline: 0;
   text-decoration: none;
-  -webkit-transition: color .25s, background .5s, opacity .25s;
-  transition: color .25s, background .5s, opacity .25s; }
+  -webkit-transition: color .25s, background .5s;
+  transition: color .25s, background .5s; }
 input, button {
   margin: 0;
   padding: 0; }
@@ -105,78 +107,139 @@ input::-moz-focus-inner, button::-moz-focus-inner {
   border: 0;
   padding: 0; }
 h1 {
-  font-size: 1.5em; }
-
-/*class style*/
-.pageTopLight {
+  font-size: 1.5rem; }
+/***** class style *****/
+/*页面上方的暗幕*/
+.pageTopDark {
   position: absolute;
   width: 100%;
-  height: 250px;
+  height: 30%;
   background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0.1), rgba(0,0,0,0));
 }
-.pageLight {
+/*整个页面的暗幕*/
+.pageDark {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.3);
 }
-
-
-/*id style*/
-#index_pageChose {
-  position: absolute;
-  top: 30%;
-  right: 3%;
-  z-index: 10;
-}
-#pageChose1, 
-#pageChose2, 
-#pageChose3, 
-#pageChose4, 
-#pageChose5, 
-#pageChose6 {
+/*切换按钮样式*/
+.pageChose {
   width: 10px;
   height: 10px;
-  margin: 30px 0;
+  margin: 50% 0;
   background-color: #888;
   border-radius: 5px;
 }
-#pageChose1 {
+.pageChose:hover {
   background-color: #fff;
 }
-#index_pageChose >div:hover {
+.indexPage {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+}
+/*p标签中的标题*/
+.headline {
+  padding: 0.5rem 0;
+  font-size: 1.8rem;
+  font-family: "Microsoft YaHei";
+}
+/*默认文本*/
+.textAuto {
+  font-family: "SimSun";
+}
+/*默认渐变*/
+.shadeAuto {
+  -webkit-transition: color .25s, background .5s,opacity .5s;
+  transition: color .25s, background .5s,opacity .5s;
+}
+/***** id style *****/
+#index_pageChose {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  width: 4%;
+  z-index: 10;
+}
+#pageChose1 {
   background-color: #fff;
 }
 #indexDiv {
   overflow: hidden;
 }
 #page1 {
-  color: #fff;
-  height: 100%;
   background-image: url("../img/background.jpg");
   background-size: cover;
 }
 #page1Right {
   position: absolute;
   right: 0;
-  width: 43%;
+  width: 42%;
   height: 100%;
-  background-color: rgba(30,30,30,0.3);
+  background-color: rgba(0,0,0,0.3);
+  -webkit-transition: width .5s;
+  transition: width .5s;
 }
 #page1Right > * {
-  margin: 0 16% 0 10%;
+  margin: 5% 16% 0 12%;
+}
+#page1Logo {
+  width: 60%;
+  margin: 30% 0 0;
 }
 #login {
   color: #2cc;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   text-align: center;
   display: block;
-  padding: 6px;
-  margin: 30px 0;
+  padding: .4rem;
   width: 40%;
   border:2px solid #2cc;
 }
-@media screen and (min-width: 44em) {
+#login:hover {
+  color: #fff;
+  background-color: rgba(22,166,166,0.5);
 }
-@media screen and (max-width: 44em) {
+#chromeTip {
+  color: #aaa;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 6%;
+  left: -8%;
+}
+#page2 {
+  position: relative;
+  top: 0;
+  background-color: #00aebb;
+  
+}
+#page2mid {
+  position: relative;
+  top: 12%;
+  left: 16%;
+  width: 68%;
+  height: 0;
+  padding-bottom: 42%;
+  background: #52cdd5 url("../img/bg1359.png");
+  background-size: cover;
+}
+#page2text {
+  padding: 4% 7%;
+  width: 60%
+}
+#page2img1 img {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+}
+#page2img2 img {
+  position: absolute;
+  top: -6%;
+  right: 6%;
+  width: 15%;
+}
+@media screen and (min-width: 42em) { 
+}
+@media screen and (max-width: 42em) {
 }
