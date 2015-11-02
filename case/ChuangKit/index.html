@@ -12,36 +12,38 @@
 <link rel="stylesheet" type="text/css" href="css/chuangKit-style.css">
 </head>
 
-<body onload="page1Animation()">
+<body >
 <div id="index_pageChose">
-	<div id="pageChose1" class="page1 pageChose adjustAuto active"></div>
-  <div id="pageChose2" class="page2 pageChose adjustAuto"></div>
-  <div id="pageChose3" class="page3 pageChose adjustAuto"></div>
-  <div id="pageChose4" class="page4 pageChose adjustAuto"></div>
-  <div id="pageChose5" class="page5 pageChose adjustAuto"></div>
-  <div id="pageChose6" class="page6 pageChose adjustAuto"></div>
+	<div id="pageChose1" class="pageChose active"></div>
+  <div id="pageChose2" class="pageChose"></div>
+  <div id="pageChose3" class="pageChose"></div>
+  <div id="pageChose4" class="pageChose"></div>
+  <div id="pageChose5" class="pageChose"></div>
+  <div id="pageChose6" class="pageChose"></div>
 </div>
 <div id="indexDiv">
-  <div id="page1" class="indexPage row">
+  <div id="page1" class="indexPage">
     <div class="pageTopDark"></div>
     <div class="pageDark"></div>
     <div  id="page1Right" class="shadeAuto">
-      <div class="fade-in"><img id="page1Logo" src="img/logo_3577b0e.png" /></div>
-      <div class="textAuto fade-in">
+      <div class="shadeAuto"><img id="page1Logo" src="img/logo_3577b0e.png" /></div>
+      <div class="textAuto shadeAuto">
         <p class="headline">贴近你的创意</p>
         <p>从未想象的简单与有趣，创客贴给你全新的线上设计体验，随时随地开启设计，呈现你的创意和想法。</p>
       </div>
-      <a href="" id="login" class="fade-in">登&nbsp;&nbsp;&nbsp;录</a> 
-      <div id="chromeTip" class="textAuto fade-in">为保证获得最佳体验，强烈推荐使用Chrome(谷歌)浏览器进行设计</div>  
+      <a href="" id="login" class="shadeAuto">登&nbsp;&nbsp;&nbsp;录</a> 
+      <div id="chromeTip" class="textAuto shadeAuto">为保证获得最佳体验，强烈推荐使用Chrome(谷歌)浏览器进行设计</div>  
     </div>
   </div>
 
-  <div id="page2" class="indexPage row">
-   	<div class="page2bg adjustAuto">
-      <div class="page2text1 adjustAutoText">创造丰富的作品</div>
-      <div class="page2text2 adjustAutoText">不让复杂的设计软件拘束你的创意，用最简单有趣的方式制作海报、ppt、信息图、贺卡、名片等所有你想要的一切。</div>
-      <div class="page2img1 pageImg adjustAuto"><img src="/img/index/2/22_bfcc07d.png" /></div>
-      <div class="page2img8 pageImg adjustAuto"><img src="/img/index/2/1_24b75c0.png" /></div>
+  <div id="page2" class="indexPage">
+   	<div id="page2mid">
+      <div id="page2text">
+        <p class="headline">创造丰富的作品</p>
+        <p >不让复杂的设计软件拘束你的创意，用最简单有趣的方式制作海报、ppt、信息图、贺卡、名片等所有你想要的一切。</p>
+      </div>
+      <div id="page2img1" class="pageImg adjustAuto"><img src="img/22_bfcc07d.png" /></div>
+      <div id="page2img2" class="pageImg adjustAuto"><img src="img/1_24b75c0.png" /></div>
     </div>
   </div>
   <div id="page3" class="indexPage row">
@@ -100,22 +102,89 @@
 </div>
 <script type="text/javascript">
 'use strict';
-//自调用时触发：适应屏幕高度
-//窗口大小调整时触发：适应屏幕高度
-(window.onresize=function() {
+//自调用时，以及窗口大小调整时触发：适应屏幕高度
+(window.onresize=function(){
   document.getElementById("indexDiv").style.height=window.innerHeight+"px";
 })();
-//当page1Right页面被加载时
-function page1Animation() {
-  document.getElementById("page1Right").style.width="42%";
+//当page1Right页面被加载时触发
+window.onload=page1AnimationRestore();
+window.onload=page1Animation();
+//页面动画
+function page1Animation(){
+  var page1Right=document.getElementById("page1Right");
   var labels=document.getElementById("page1Right").childNodes;
-  for (var i=0;i<labels.length;i++) {
+  setTimeout(function(){page1Right.style.width="42%";},0);
+  setTimeout(function(){labels[7].style.opacity="1";},300);
+  setTimeout(function(){labels[1].style.opacity="1";},500);
+  setTimeout(function(){labels[3].style.opacity="1";},700);
+  setTimeout(function(){labels[5].style.opacity="1";},900);
+};
+function page2Animation(){};
+function page3Animation(){};
+function page4Animation(){};
+function page5Animation(){};
+function page6Animation(){};
+//页面还原
+function page1AnimationRestore(){
+  var labels=document.getElementById("page1Right").childNodes;
+  document.getElementById("page1Right").style.width="6%";
+  for(var i=0;i<labels.length;i++){
     if(labels[i].nodeName=="DIV" || labels[i].nodeName=="A"){
-    }//没用上
-    setTimeout(function(){labels[7].style.opacity="1";},300);
-    setTimeout(function(){labels[1].style.opacity="1";},500);
-    setTimeout(function(){labels[3].style.opacity="1";},700);
-    setTimeout(function(){labels[5].style.opacity="1";},900);
+      labels[i].style.opacity="0";
+    }
+  }
+};
+function page2AnimationRestore(){};
+function page3AnimationRestore(){};
+function page4AnimationRestore(){};
+function page5AnimationRestore(){};
+function page6AnimationRestore(){};
+//鼠标滚轴触发事件
+var pageKey=1;
+window.onwheel=function scrollFunc(e){
+  if(e.wheelDelta){//IE/Opera/Chrome
+    if(e.wheelDelta==120 && pageKey>1){
+      pageUp(pageKey);
+      pageKey -= 1;
+      window.onwheel=function(){};
+      setTimeout(function(){window.onwheel=scrollFunc;},500);
+    }else if(e.wheelDelta==-120 && pageKey<6){
+      pageDown(pageKey);
+      pageKey += 1;
+      window.onwheel=function(){};
+      setTimeout(function(){window.onwheel=scrollFunc;},500);
+    }
+  }else if(e.detail){//Firefox
+  }
+};
+function pageUp(n){
+  if (n==2) {
+    page1AnimationRestore();
+
+    setTimeout(function(){
+      document.getElementById("page2").style.transition="top .8s";
+      document.getElementById("page2").style.top="0";
+      page1Animation();
+    },300);
+  }else if (n==3) {
+  }else if (n==4) {
+  }else if (n==5) {
+
+  }else if (n==6) {
+
+  }
+};
+function pageDown(n){
+  if (n==1) {
+    document.getElementById("page2").style.transition="top .4s";
+    document.getElementById("page2").style.top="-100%";
+    page2Animation();
+  }else if (n==2) {
+  }else if (n==3) {
+  }else if (n==4) {
+
+  }else if (n==5) {
+
   }
 };
 </script>
