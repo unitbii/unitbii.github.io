@@ -21,7 +21,7 @@
 
 实现功能：
 
->1 获取浏览器的宽/高
+1 获取浏览器的宽/高
   
     1.1 占满屏且不溢出
     
@@ -31,7 +31,7 @@
     
     注意：请将script代码放在body末尾
     
->2 JavaScript获取元素内子元素的集合
+2 JavaScript获取元素内子元素的集合
   
     2.1 当页面加载后执行
     
@@ -47,9 +47,9 @@
     
   2 CSS子代选择器（BUG）
   
-    >div {background-color}无法用id选择器覆盖
+    >">div {background-color}" 无法用id选择器覆盖
     
-    >* {margin}则可以用id选择器覆盖
+    >">* {margin}" 则可以用id选择器覆盖
 
 以上 2015.11.1
 
