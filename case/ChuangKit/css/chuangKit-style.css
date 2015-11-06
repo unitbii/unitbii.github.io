@@ -74,9 +74,13 @@ a img {
   -webkit-margin-after: 0; }
 html, body {
   font-family: "Helvetica Neue", "Helvetica", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
   color: #606c71; }
+@media screen and (min-width: 64em) {
+  html, body {font-size: 16px;line-height: 1.5; } }
+@media screen and (max-width: 64em) and (min-width: 42em){
+  html, body {font-size: 14px;line-height: 1.3; } }
+  @media screen and (max-width: 42em) {
+  html, body {font-size: 12px;line-height: 1.1; } }
 iframe {
   margin-top: 10px; }
 small {
@@ -121,25 +125,75 @@ h1 {
   height: 100%;
   background-color: rgba(0,0,0,0.3);
 }
-/*p标签中的标题*/
+/*切换按钮样式*/
+.pageChose {
+  width: 10px;
+  height: 10px;
+  margin: 50% 0;
+  background-color: #888;
+  border-radius: 5px;
+}
+.pageChose:hover {
+  background-color: #fff;
+}
+/*主页面*/
+.indexPage {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+}
+.row {
+  position: relative;
+  top: 0;
+  display: none;
+}
+.pageMid {
+  position: absolute;
+  top: 12%;
+  left: 16%;
+  width: 68%;
+  height: 0;
+  padding-bottom: 42%;
+}
+/*标题格式*/
 .headline {
-  font-size: 1.8rem;
   font-family: "Microsoft YaHei";
 }
+@media screen and (min-width: 64em) {
+  .headline {
+    padding: 0.5rem 0;
+    font-size: 1.8rem; } }
+@media screen and (max-width: 64em) and (min-width: 42em){
+  .headline {
+    padding: 0.3rem 0;
+    font-size: 1.5rem; } }
+  @media screen and (max-width: 42em) {
+  .headline {
+    padding: 0.1rem 0;
+    font-size: 1.2rem; } }
 /*默认文本*/
 .textAuto {
   font-family: "SimSun";
 }
-/*淡入动画*/
-.fade-in {
-  opacity: 0;
-  -webkit-transition: color .25s, background .5s,opacity .5s;
-  transition: color .25s, background .5s,opacity .5s;
+/*图像容器*/
+.pageImg img {
+  width: 100%;
 }
-/*默认渐变*/
+/*默认渐变：字体颜色、背景、透明度*/
 .shadeAuto {
   -webkit-transition: color .25s, background .5s,opacity .5s;
   transition: color .25s, background .5s,opacity .5s;
+}
+/*渐变1：移动、旋转、透明度*/
+.shade1 {
+  position: absolute;
+  opacity: 1;
+  -webkit-transition: opacity .6s, top .6s, left 1s, -webkit-transform .8s;
+  transition: opacity .6s, top .6s, left 1s, transform .8s;
+}
+/*初始透明度0*/
+.initOpacity0 {
+  opacity: 0;
 }
 /***** id style *****/
 #index_pageChose {
@@ -149,41 +203,24 @@ h1 {
   width: 4%;
   z-index: 10;
 }
-#pageChose1, 
-#pageChose2, 
-#pageChose3, 
-#pageChose4, 
-#pageChose5, 
-#pageChose6 {
-  width: 10px;
-  height: 10px;
-  margin: 50% 0;
-  background-color: #888;
-  border-radius: 5px;
-}
 #pageChose1 {
-  background-color: #fff;
-}
-#index_pageChose >div:hover {
   background-color: #fff;
 }
 #indexDiv {
   overflow: hidden;
 }
 #page1 {
-  color: #fff;
-  height: 100%;
   background-image: url("../img/background.jpg");
   background-size: cover;
 }
 #page1Right {
   position: absolute;
   right: 0;
-  width: 2%;
+  width: 42%;
   height: 100%;
   background-color: rgba(0,0,0,0.3);
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
+  -webkit-transition: width .5s;
+  transition: width .5s;
 }
 #page1Right > * {
   margin: 5% 16% 0 12%;
@@ -197,7 +234,7 @@ h1 {
   font-size: 1.4rem;
   text-align: center;
   display: block;
-  padding: 0.4rem;
+  padding: .4rem;
   width: 40%;
   border:2px solid #2cc;
 }
@@ -212,9 +249,143 @@ h1 {
   bottom: 6%;
   left: -8%;
 }
-@media screen and (min-width: 42em) {
-  
+#page2 {
+  background-color: #00aebb;
+}
+#page2mid {
+  background: #52cdd5 url("../img/bg1359.png");
+  background-size: cover;
+}
+#page2text {
+  position: absolute;
+  padding: 4% 7%;
+  top: 0;
+  width: 60%;
+}
+#page2img1 {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+}
+#page2img2 {
+  position: absolute;
+  top: -6%;
+  right: -7%;
+  width: 30%;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+#page2img2 img {
+  width: 50%;
+}
+#page3text1 {
+  top: 4%;
+  left: 49%;
+}
+#page3text2 {
+  top: 15%;
+  left: 25%;
+  width: 50%;
+  text-align: right;
+}
+#page3img1 {
+  top: 63%;
+  left: 7%;
+  width: 20%;
+  z-index: 3;
+}
+#page3img2 {
+  top: 35%;
+  left: 82%;
+  width: 21%;
+}
+#page3img3 {
+  top: 23%;
+  left: -5%;
+  width: 16.9%;
+}
+#page3img4 {
+  top: 36%;
+  left: 22%;
+  width: 53.2%;
+  z-index: 2;
+  -webkit-transform:rotateX(0);
+  transform:rotateX(0);
+}
+#page3img5 {
+  top: 32%;
+  left: 13.8%;
+  width: 69.3%;
+}
+#page3img6 {
+  top: -5%;
+  right: -7%;
+  width: 14%;
+  z-index: 2;
+}
+#page4text1 {
+  top: 70%;
+  left: 50%;
+}
+#page4text2 {
+  top: 81%;
+  left: 9%;
+  width: 80%
+}
+#page4img1 {
+  top: 56%;
+  left: -7%;
+  width: 14%;
+}
+#page4img2 {
+  top: 62%;
+  left: 36%;
+  width: 10.5%;
+}
+#page4img5 {
+  top: 88%;
+  left: 74%;
+  width: 13%;
+}
+#page4img6 {
+  top: 24%;
+  left: 6.5%;
+  width: 13%;
+}
+#page4img7 {
+  top: 31%;
+  left: 3%;
+  width: 2.2%;
+}
+#page4img8 {
+  top: 9%;
+  left: 24%;
+  width: 30%;
+}
+#page4img9 {
+  top: 10.5%;
+  left: 24.8%;
+  width: 23.8%;
+  z-index: 2;
+}
+#page4img10 {
+  top: 1%;
+  left: 59%;
+  width: 40%;
+}
+#page5 {
+  top: -300%;
+  background-color: #cecece;
+  -webkit-transition: top .4s;
+  transition:top .4s;
+}
+#page5Mid {
+  width: 100%;
+  height: 0;
+  padding-bottom: 42%;
+  background-color: #e4e4e4;
+}
+@media screen and (min-width: 42em) { 
 }
 @media screen and (max-width: 42em) {
-  html, body {font-size: 12px;}
 }
