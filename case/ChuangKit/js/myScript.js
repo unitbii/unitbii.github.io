@@ -4,7 +4,6 @@
   document.getElementById("indexDiv").style.height=window.innerHeight+"px";
 })();
 //当page1Right页面被加载时触发
-window.onload=page1AnimationInit();
 window.onload=function (){
   page1Animation();
   setTimeout(function(){
@@ -92,8 +91,6 @@ function page5AnimationInit(){
   document.getElementById("page5img2").style.left="58.7%";
 };
 function page6AnimationInit(){
-  document.getElementById("page6").style.opacity="0";
-  document.getElementById("page6").style.top="-500%";
   document.getElementById("page6img1").style.opacity="0";
   document.getElementById("page6img2").style.opacity="0";
   document.getElementById("page6img3").style.opacity="0";
@@ -302,9 +299,10 @@ function pageDown(n){
     },500);
   }else if (n==5) {
     page5AnimationOver();
-    document.getElementById("page6").style.opacity="1";
     setTimeout(function(){
       document.getElementById("page5").style.top="-500%";
+      document.getElementById("page6").style.transition="top 0s";
+      document.getElementById("page6").style.top="-500%";
     },100);
     setTimeout(function(){
       page6Animation();
@@ -352,6 +350,7 @@ function pageUp(n){
     page6AnimationOver();
     setTimeout(function(){
       document.getElementById("page5").style.top="-400%";
+      document.getElementById("page6").style.transition="top .6s";
       document.getElementById("page6").style.top="-400%";
     },50);
     setTimeout(function(){

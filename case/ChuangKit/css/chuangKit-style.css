@@ -128,10 +128,10 @@ h1 {
   width: 10px;
   height: 10px;
   margin: 50% 0;
-  background-color: #888;
+  background: #888;
   border-radius: 5px; }
 .pageChose:hover {
-  background-color: #fff; }
+  background: #fff; }
 /*主页面*/
 .indexPage {
   color: #fff;
@@ -204,12 +204,13 @@ h1 {
 #page1Right {
   position: absolute;
   right: 0;
-  width: 42%;
+  width: 12%;
   height: 100%;
   background-color: rgba(0,0,0,0.3);
   -webkit-transition: width .5s;
   transition: width .5s; }
 #page1Right > * {
+  opacity: 0;
   margin: 5% 16% 0 12%; }
 #page1Logo {
   width: 60%;
