@@ -1,0 +1,222 @@
+body {
+  color: #333;
+}
+a {
+  color: #22f; 
+}
+/******************* custom Font *******************/
+@font-face {
+  font-family: "covered_by_your_graceregular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../font/coveredbyyourgrace-webfont.eot");
+  src: url("../font/coveredbyyourgrace-webfont.eot?#iefix") format('embedded-opentype'), url("../font/coveredbyyourgrace-webfont.svg#covered_by_your_graceregular") format('svg'), url("../font/coveredbyyourgrace-webfont.woff") format('woff'), url("../font/coveredbyyourgrace-webfont.ttf") format('truetype');
+}
+/******************* custom style ********************/
+header {}
+.header_top {
+  background: #368;
+  color: #fff;
+}
+.textlogo {
+  color: #fff;
+  font-family: covered_by_your_graceregular;
+  font-size: 2.5rem;
+}
+.textlogo,
+.blog-motto {
+  display: inline-block;
+  padding: .5em .5em .2em 1em;
+}
+.header_nav >* {
+  display: inline-block;
+  padding: .5em 1.5em;
+}
+.header_nav >a {
+  color: #368;
+}
+.header_nav >a:hover {
+  background: #368;
+  color: #fff;
+}
+.seek {
+  float: right;
+}
+.main {
+  background: #f4f4f4;
+  padding-bottom: 5em; 
+}
+.main h2 {
+  color: #28c;
+  opacity: 0.7;
+  border-left: 4px solid #68c;
+  font-size: 1.7rem;
+  padding: .2em .6em;
+}
+.main h3 {
+  color: #28c;
+  font-size: 1.5rem;
+  padding: .5em 0;
+}
+.main h4 {
+  color: #666;
+  font-size: 1.1rem;
+  padding: .5em 0;
+}
+.main-title {
+  border-bottom: 1px solid #ccc;
+  font-size: 3rem;
+  padding: 1em 0 0;
+}
+.main-body {
+  padding: 2em 0;
+}
+.note-content {
+  padding: 1em;
+}
+.note-content >div {
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+}
+.leftNav {
+  float: left;
+  width: 18%;
+}
+.leftNav >a {
+  color: #888;
+  display: block;
+  font-size: 1.2rem;
+  padding: .05em 1em;
+}
+.leftNav >a:hover {
+  color: #333;
+  background: #ddd;
+}
+.main_content {
+  border-left: 1px solid #ccc;
+  float: left;
+  width: 82%;
+}
+.article_content {
+  padding: 1em;
+}
+footer {
+  background-image: linear-gradient(120deg, #155799, #15935e);
+  height: 15em;
+  color: #fff;
+  position: relative;
+}
+footer .fishline {
+  margin-left: 7.5em;
+  height: 5em;
+  width: 2px;
+  background: #fff;
+}
+.footer_img {
+  background-image: url(../img/1102.jpg);
+  background-position: 0 -40px;
+  background-size: 100%;
+  margin-left: 4em;
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+}
+.footer_img:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+.footer_text {
+  margin: 1.5em 1em;
+  position: absolute;
+  left: 11em;
+  bottom: 4em;
+}
+/******************* table style ********************/
+.thead {
+  text-align: center;
+}
+.table_label {
+  width: 80%;
+  margin: 0 auto;
+}
+.table_2 {
+  width: 90%;
+  margin: 0 auto;
+}
+.table_3 {
+  width: 50%;
+  margin: 0 auto;
+}
+.table_label td,
+.table_label th,
+.table_2 td,
+.table_2 th,
+.table_3 td,
+.table_3 th {
+  padding: .2em .4em;
+}
+.table_label th {
+  color: #333;
+  background: #ccc;
+}
+.table_2 th,
+.table_3 th {
+  color: #fff;
+  background: #555;
+}
+.th_width_20 {
+  width: 20%;
+}
+.th_width_25 {
+  width: 25%;
+}
+.th_width_30 {
+  width: 30%;
+}
+.th_width_40 {
+  width: 40%;
+}
+.tr_bg_gray {
+  background: #e1e1e1;
+}
+/******************* 框体样式 ********************/
+.code {
+  font-family: courier, "Courier New";
+  border: 1px solid #888;
+  border-radius: 5px;
+  background: #385062;
+  color: #fff;
+  padding: 1em;
+  display: block;
+}
+.code h3 {
+  color: #fff;
+  font-size: 1.3em;
+  padding: .2em;
+}
+.code_gray {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background: #e1e1e1;
+  color: #666;
+  margin: 1em 2em 1em 0;
+  padding: .5em 1.5em .5em 1em;
+}
+.code_gray h3{
+  font-size: 1.3em;
+  padding: .2em;
+}
+/******************* function style ********************/
+.animated a:hover {
+  -webkit-transition: color .25s, background .25s, opacity .1s;
+  transition: color .25s, background .25s, opacity .1s; 
+}
+.center {
+  margin: 0 auto;
+  width: 1100px;
+}
+@media screen and (max-width: 1100px) {
+  header,
+  .main,
+  footer {width: 1100px;}
+}

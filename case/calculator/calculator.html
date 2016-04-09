@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8"/>
+  <title>计算器</title>
+  <meta name="author" content="C.Y">
+  <meta name="description" content="动手制作计算器。">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/public_style.css" />
+  <link rel="stylesheet" type="text/css" href="css/calculator_style.css">
+  <style type="text/css">
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <table class="calculator_table table_border_1" border="1" bordercolor="#ccc">
+      <tr>
+        <th colspan="5">计算器</th>
+      </tr>
+      <tr>
+        <td class="calculator_screen" onclick="" colspan="5">
+          <div class="calculator_screen_top" id="calculator_screen_top">&nbsp;</div>
+          <div class="calculator_screen_main" id="calculator_screen_main">0</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="unfinished" onclick="">MC</td>
+        <td class="unfinished" onclick="">MR</td>
+        <td class="unfinished" onclick="">MS</td>
+        <td class="unfinished" onclick="">M+</td>
+        <td class="unfinished" onclick="">M-</td>
+      </tr>
+      <tr>
+        <td class="unfinished" onclick="">←</td>
+        <td class="unfinished" onclick="">CE</td>
+        <td onclick="init();">C</td>
+        <td onclick="plus_minus();">±</td>
+        <td onclick="square_root();">√</td>
+      </tr>
+      <tr>
+        <td onclick="assignin_Num('7');">7</td>
+        <td onclick="assignin_Num('8');">8</td>
+        <td onclick="assignin_Num('9');">9</td>
+        <td onclick="click_operator('/');">/</td>
+        <td onclick="click_operator('%');">%</td>
+      </tr>
+      <tr>
+        <td onclick="assignin_Num('4');">4</td>
+        <td onclick="assignin_Num('5');">5</td>
+        <td onclick="assignin_Num('6');">6</td>
+        <td onclick="click_operator('*');">*</td>
+        <td onclick="reciprocal();">1/x</td>
+      </tr>
+      <tr>
+        <td onclick="assignin_Num('1');">1</td>
+        <td onclick="assignin_Num('2');">2</td>
+        <td onclick="assignin_Num('3');">3</td>
+        <td onclick="click_operator('-');">-</td>
+        <td onclick="isEqualTo();" rowspan="2">=</td>
+      </tr>
+      <tr>
+        <td onclick="assignin_Num('0');" colspan="2">0</td>
+        <td onclick="assignin_Num('.');">.</td>
+        <td onclick="click_operator('+');">+</td>
+      </tr>
+    </table>
+  </div>
+<script type="text/javascript">
+</script>
+<script src="js/calculator_script.js"></script>
+</body>
+</html>

@@ -1,45 +1,46 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html lang="zh-cn">
 <head>
-<meta charset="utf-8">
-<title>Unitbii.GitHub.io</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+  <meta charset="utf-8">
+  <title>Vultr部署shadowsocks实况</title>
+  <meta name="author" content="C.Y" />
+  <meta name="description" content="" />
+  <link rel="icon" href="../img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../css/public_style.css">
+  <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
 </head>
 <body>
-  <div class="page-header">
-    <h1 class="project-name">Unitbii.GitHub.io</h1>
-    <h1 class="project-tagline">我的静态博客</h2>
-    <nav class="navigation">
-      <a href="../index.html">主页 | Home</a>
-      <a href="article-index.html">文章 | Article</a>
-      <a href="../skill_tree.html">技能树 | Skill Tree</a>
-      <a href="../case/ChuangKit/index.html">案例 | Case</a>
-    </nav>
-  </div>
-
-  <div class="page-main row">
-    <div class="main-content">
-      <div class="article-title row">
+  <header>
+    <div class="center">
+      <h1 class="site_name">Unitbii.GitHub.io</h1>
+      <p class="blog_motto">我的静态博客</p>
+      <nav class="header_nav">
+        <a href="../index.html">主页 | Home</a>
+        <a href="article_index.html">文章 | Article</a>
+        <a href="../skill_tree.html">技能树 | Skill Tree</a>
+        <a href="../case/case_index.html">案例 | Case</a>
+      </nav>
+    </div>
+  </header>
+  <main class="main center row">
+    <article class="main_content fl">
+      <div class="article_title row">
         <h2>Vultr部署shadowsocks实况</h2>
         <p>发表于2015.10.26 &nbsp;&nbsp;By <a href="">Charlsey</a></p>
       </div>
-      <article class="article-content">
-        <div class="article-directory">
+      <div class="article_content">
+        <nav class="article_directory">
           <b>文章目录</b>
-          <ul>
-            <li><a href="#foreword">1. 前言</a></li>
-            <li><a href="#chooseVPS">2. 挑选VPS</a></li>
-            <li><a href="#vultr">3. vultr翻墙成本</a></li>
-            <li><a href="#ssserver">4. ss服务端设置</a></li>
-            <li><a href="#ssclient">5. ss客户端设置</a></li>
-            <li><a href="#readme">6. 翻墙须读</a></li>
-          </ul>
-        </div>
+          <a href="#foreword">1. 前言</a>
+          <a href="#chooseVPS">2. 挑选VPS</a>
+          <a href="#vultr">3. vultr翻墙成本</a>
+          <a href="#ssserver">4. ss服务端设置</a>
+          <a href="#ssclient">5. ss客户端设置</a>
+          <a href="#readme">6. 翻墙须读</a>
+        </nav>
         <h3 id="foreword">前言</h3>
         <p>当我开始学shadowsocks(简称ss)的时候它就被迫关闭了，有点悲伤...好在它被破解之前还能用一段时间，让我们来领略一下这款好用的翻墙工具吧。</p>
-        <div class="article-import">
+        <div class="article_import">
           <h4>shadowsocks的特点：</h4>
           <ul>
             <li>省电，移动设备首选</li>
@@ -104,32 +105,35 @@
           同时，Shadowsocks虽然并不占资源，但强烈不建议与重要项目如个人网站等运行在同一空间。若因翻墙使服务器IP被封停，则会影响到整个项目，得不偿失。<br><br>
           只希望世界上再少一堵墙。
         </p>
-      </article>
+      </div>
       <div>感谢您的阅读。</div>
-    </div>
-    <div class="main-sidebar">
-      <nav class="sidebar-sort">
-        <h1>分类</h1>
+    </article>
+    <aside class="Rside fr">
+      <nav class="Rside_nav">
+        <h2>分类</h2>
         <a href="">简历 | resume</a>
         <a href="">学习 | Study</a>
         <a href="">生活 | Life</a>
         <a href="">软件 | Soft</a>
       </nav>
-      <nav class="sidebar-sort">
-        <h1>友情链接</h1>
+      <nav class="Rside_nav">
+        <h2>友情链接</h2>
         <a href=""></a>
         <a href=""></a>
         <a href=""></a>
       </nav>
-      <div class="click-statistics">
+      <div class="visitorStatistics">
         <h2>访客 : </h2>
       </div>
-    </div>
-  </div>
-  <footer class="article-footer"> 
-    <div class="footer-imgLine"></div>
-    <div class="footer-img div-img100" ><img src="../img/1102.jpg"></div >
-    <div class="footer-text">Hello，I'm Charlsey. This is my blog on GitHub.<br>Try to do better.</div>    
+    </aside>
+  </main>
+  <footer>
+    <div class="fishline"></div>
+    <div class="footer_img animated" id="footer_img"></div>
+    <p class="footer_text">
+      Hello，I'm CHarlsey. I'm learning HTML.<br>
+      Do you want to come with me?
+    </p>
   </footer>
 </body>
 </html>

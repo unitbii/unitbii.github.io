@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8"/>
+  <title>计时器</title>
+  <meta name="author" content="C.Y">
+  <meta name="description" content="动手制作计时器。">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="../../css/public_style.css" />
+  <link rel="stylesheet" type="text/css" href="css/stopwatch_style.css">
+  <style type="text/css">
+  </style>
+</head>
+<body>
+  <div class="stopwatch row">
+    <div class="stopwatch_screen fl">
+      <div class="stopwatch_screen_left fl row">
+        <div class="stopwatch_screen_top row">
+          <div class="top_status fl" id="top_status">时钟</div>
+          <div class="top_No fl" id="No">No.0</div>
+        </div>
+        <div class="stopwatch_screen_main" id="stopwatch_screen_main">
+          00:00:00
+        </div>
+      </div>
+      <div class="stopwatch_screen_right fl">
+        <span>time_1</span>
+        <div id="time_1">00:00:00</div>
+        <span>time_2</span>
+        <div id="time_2">00:00:00</div>
+        <span>time_3</span>
+        <div id="time_3">00:00:00</div>
+      </div>
+    </div>
+    <div class="stopwatch_buttons fl">
+      <div class="stopwatch_button" onclick="star_button();">star</div>
+      <div class="stopwatch_button" onclick="reset_button();">reset</div>
+    </div>
+  </div>
+<script type="text/javascript">
+</script>
+<script src="js/stopwatch_script.js"></script>
+</body>
+</html>

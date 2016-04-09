@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8" />
+  <title>HelloNico</title>
+  <meta name="author" content="C.Y" />
+  <meta name="description" content="HelloNico是一个学习作品。" />
+  <link rel="icon" href="../../img/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="../css/public_style.css">
+  <link rel="stylesheet" href="../css/mystyle.css" type="text/css">
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="textlogo">
+      <div class="pagecenter">
+      <h1 class="site-name">
+        <a href="../index.html" title="HelloNico">HelloNico</a>
+      </h1>
+      <h3 class="blog-motto">助力web前端学习</h3>
+      </div>
+    </div>
+    <nav class="headNav animated pagecenter">
+      <a href="../index.html">首页</a>
+      <a href="study_notes.html">笔记</a>
+      <a href="html/label.html">HTML/CSS</a>
+      <a href="">JavaScript</a>
+      <a href="">Jquery</a>
+      <a href="">Node.js</a>
+      <div>
+        <input></input>
+        <a href="">搜索</a>
+      </div>
+    </nav>
+    <hr>
+  </header>
+
+  <div class="main">
+    <div class="main-title pagecenter">
+      <h1>Note 学习笔记</h1>
+    </div>
+    <div class="main-body pagecenter">
+      <h2>2月28日</h2>
+      <div class="note-content">
+        <h3>post/get</h3>
+      </div>
+      <h2>2月29日</h2>
+      <div class="note-content">
+        <h3>1.异页锚点</h3>
+        <div>
+          <code class="code">
+            <pre>&lt;a href="../../index.html#footer" /&gt;</pre>
+          </code>
+          <a href="../../index.html#footer">异页跳转</a>
+          <a href="index.html#footer">本页跳转</a>
+        </div>
+        <h3>2.图片超链</h3>
+        <div>
+          <code class="code">
+            <pre>&lt;img src="../../img/logo100.png" usemap="#mapname" /&gt;<br>&lt;map name="mapname"&gt;<br>  &lt;area shape="circle" coords="46,54,50" href="" /&gt;<br>&lt;/map&gt;<br></pre>
+          </code>
+          <h4>图片演示</h4>
+          <img src="../img/logo100.png" usemap="#mapname" />
+          <map name="mapname">
+            <area shape="circle" coords="46,54,50" href="#" />
+          </map>
+        </div>
+        <h3>3.frame</h3>
+        <div>
+          <code class="code">
+            <pre>&lt;frameset cols="30%,70%"&gt;<br>  &lt;frame src="a1.html"&gt;<br>  &lt;frame src="a2.html"&gt;<br>&lt;/frameset&gt;<br></pre>
+          </code>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="backtotop">返回<br>顶部</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer_fishline"></div>
+    <div class="footer_img"><img src="../img/1102.jpg" /></div>
+    <p class="footer-text">
+      Hello，I'm CHarlsey. I'm learning HTML.<br>
+      Do you want to come with me?
+    </p> 
+  </footer>
+<script type="text/javascript">
+  
+</script>
+<script src="js/myScript.js"></script>
+</body>
+</html>
