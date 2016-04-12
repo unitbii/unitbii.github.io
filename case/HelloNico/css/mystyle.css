@@ -120,10 +120,11 @@ footer .fishline {
   width: 7em;
   height: 7em;
   border-radius: 50%;
+  transition: transform 10s; 
 }
 .footer_img:hover {
+  transition: transform 1s; 
   transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
 }
 .footer_text {
   margin: 1.5em 1em;

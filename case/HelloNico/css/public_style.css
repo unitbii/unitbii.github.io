@@ -117,65 +117,22 @@ td {
 }
 /******************** 功能 样式 **********************/
 .animated {
-  -webkit-transition: color .25s, background .25s, opacity .1s, right .25s, width .25s, transform 10s;
-  transition: color .25s, background .25s, opacity .1s, right .25s, width .25s, transform 10s; }
-.animated:hover {
-  -webkit-transition: color .25s, background .25s, opacity .1s, right .25s, width .25s, transform 1s;
-  transition: color .25s, background .25s, opacity .1s, right .25s, width .25s, transform 1s; }
-.float_left {
-  float: left;
-}
-.float_right {
-  float: right;
-}
-.inline_block {
-  display: inline-block;
-}
-.img_height_width_100 img{
-  height: 100%;
-  width: 100%;
-  display: block;
-}
-.absolute {
-  position: absolute;
-}
-.relative {
-  position: relative;
-}
+  transition: color .25s, background .25s, opacity .1s, right .25s, width .25s; }
 .row:after {
     content: "";
     clear: both;
     display: block;
 }
 /******************** 调试用 **********************/
-.bg_red {
-	background-color: red;
-}
-.border_red {
-	border: 1px solid red;
-}
-.color_red {
-  color: #d00;
-}
-.color_gray {
-  color: #aaa;
-}
-/*************************功能 样式(简写)**************************/
 .bgr {background-color: red;}
 .bdr {border: 1px solid red;}
-
 .fl {float: left;}
 .fr {float: right;}
-
-.inblock {display: inline-block;}
-.img100 img{height: 100%;width: 100%;}
 /******************** 功能 样式 **********************/
 /*.center {
   width: 1025px;
   margin: 0 auto;
 }
 @media screen and (max-width: 1025px) {
-  .header,
-  .main,
-  .footer {width: 1025px;}
+  body>* {width: 1025px;}
 }*/
