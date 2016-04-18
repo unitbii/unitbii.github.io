@@ -1,0 +1,141 @@
+body {
+  color: #505c61;
+  background: #eee;
+}
+a {
+  color: #28c;
+}
+a:hover {
+  color: #155799; 
+  -webkit-transition: color .25s, background .5s, opacity .1s;
+  transition: color .25s, background .5s, opacity .1s;
+}
+/******************** 功能 样式 **********************/
+.center {
+  width: 1000px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+  body >* {width: 1000px;}
+}
+/******************* home style ********************/
+.videoplayer {
+	width: 800px;
+	margin: 30px auto;
+	overflow: hidden;
+	box-shadow: 0 0 2px #888;
+}
+.VP_screen {
+	position: relative;
+}
+.video {
+	display: block;
+	width: 100%;
+}
+.time_Consloe {
+	cursor: pointer;
+	width: 100%;
+	height: 36px;
+	position: absolute;
+	bottom: 0;
+}
+.time_Consloe:hover #timeLine {
+	height: 8px;
+}
+.time_Consloe:hover #timePoint {
+	opacity: 1;
+}
+#timeLine{
+	width: 100%;
+	background: #9FABB3;
+	height: 4px;
+	position: absolute;
+	bottom: 0;
+}
+#currentTime {
+	background: #3F9DD5;
+	height: 100%;
+	position: absolute;
+}
+#timePoint{
+	background: #045F95;
+	border-radius: 6px;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	left: -6px;
+	bottom: -2px;
+	opacity: 0;
+}
+.VP_console {
+	background: #fff;
+	border-bottom: 1px solid #888;
+	height: 40px;
+	text-align: center;
+}
+.VP_console >* {
+	display: block;
+	float: left;
+}
+.play {
+	background: #9FABB3;
+	color: #fff;
+	height: 100%;
+	width: 40px;
+}
+.play:hover {
+	background: #4C606D
+}
+.current {
+	color: #2cc;
+	padding: 8px 3px 0 20px; 
+}
+.duration {
+	color: #ccc;
+	padding: 8px 6px 0 0;
+}
+.muted {
+	opacity: .5;
+}
+.muted:hover {
+	opacity: 1;
+}
+.danmu {
+	height: 1px;
+	width: 60%;
+}
+.voice_Console {
+	margin: 16px 0;
+	height: 8px;
+	width: 60px;
+	position: relative;
+}
+#voiceLine{
+	border-radius: 2px;
+	height: 4px;
+	width: 60px;
+	background: #ccc;
+	position: absolute;
+	top: 2px;
+}
+#currentVoice {
+	height: 100%;
+	width: 100%;
+	background: #3F9DD5;
+}
+#voicePoint{
+	width:10px;
+	height:10px;
+	border-radius: 5px;
+	background: #045F95;
+	position:absolute;
+	left: 55px;
+	top:-3px;
+}
+.fullscreen {
+	float: right;
+	opacity: .5;
+}
+.fullscreen:hover {
+	opacity: 1;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <title>播放器</title>
+  <meta name="author" content="C.Y" />
+  <meta name="description" content="" />
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/public_style.css">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+
+<body>
+	<center class="videoplayer">
+		<div class="VP_screen">
+			<video class="video" id="video">
+				<!-- <source src="video/【5星】2013电影年表.mp4"> -->
+			  <source src="video/【5星】2013年最佳电影25部混剪.mp4">
+			</video>
+			<div class="time_Consloe">
+				<div id="timeLine">
+					<div id="currentTime"></div>
+					<div id="timePoint"></div>
+				</div>
+			</div>
+		</div>
+		<div class="VP_console row" id="VP_console">
+			<img class="play" src="img/play.png">
+			<div class="current">00:00</div>
+			<div class="duration">/ 00:00</div>
+			<div class="danmu"></div>
+			<img class="muted" src="img/muted01.png">
+			<div class="voice_Console">
+				<div id="voiceLine">
+					<div id="currentVoice"></div>
+					<div id="voicePoint"></div>
+				</div>
+			</div>
+			<img class="fullscreen" src="img/fullscreen.png">
+		</div>
+	</center>
+<script src="js/myscript.js"></script>
+</body>
+</html>

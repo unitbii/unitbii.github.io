@@ -267,6 +267,20 @@ footer .fishline {
   left: 11em;
   bottom: 4em;
 }
+.aboutMe {
+  width: 240px;
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+}
+.aboutMe a{
+  display: block;
+  float: left;
+}
+.aboutMe img {
+  display: block;
+  width: 40px;
+}
 /******************** 功能 样式 **********************/
 .center {
   width: 800px;
