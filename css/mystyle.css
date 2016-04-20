@@ -125,6 +125,8 @@ header {
   .Rside {display: none;position: absolute; }
 }
 .Rside_nav h2 {
+  font-size: 1.3rem;
+  padding: .2em 0;
   border-bottom: 4px solid #aaa;
 }
 .Rside_nav a {
