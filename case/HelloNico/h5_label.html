@@ -2,18 +2,18 @@
 <html lang="zh-cn">
 <head>
   <meta charset="utf-8" />
-  <title>HelloNico</title>
+  <title>h5_label</title>
   <meta name="author" content="C.Y" />
-  <meta name="description" content="HelloNico是一个学习作品。" />
-  <link rel="icon" href="../../img/favicon.png" />
-  <link rel="stylesheet" type="text/css" href="css/public_style.css">
-  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
-  <style type="text/css">
-
-  </style>
+  <meta name="description" content="H5语义化标签" />
+  <link rel="icon" href="img/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/type.css">
+  <link rel="stylesheet" type="text/css" href="css/table.css">
+  <link rel="stylesheet" type="text/css" href="css/HelloNico_model.css">
+  <link rel="stylesheet" type="text/css" href="css/page_table.css">
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="header_top">
       <div class="center">
         <a class="textlogo" href="index.html" title="HelloNico">
@@ -22,7 +22,7 @@
         <p class="blog-motto">助力web前端学习</p>
       </div>
     </div>
-    <nav class="header_nav animated center">
+    <nav class="header_nav center">
       <a href="index.html">首页</a>
       <a href="html_label.html">HTML/CSS</a>
       <a href="">JavaScript</a>
@@ -36,26 +36,24 @@
     <hr/>
   </header>
   <div class="main">
-    <div class="main-title center">
-      <h1>HTML/CSS</h1>
-    </div>
-    <div class="main-body center row">
-      <nav class="leftNav animated">
+    <h2 class="main_title center">HTML/CSS</h2>
+    <div class="main_body center row">
+      <nav class="Lside fl">
         <a href="html_label.html">html标签</a>
-        <a href="css_style.html">css样式</a>
+        <a href="css_style.html">CSS样式</a>
         <a href="charEntity.html">实体字符</a>
         <a href="h5_label.html">语义化标签</a>
       </nav>
-      <article class="main_content">
-        <div class="article_head">
-          <h2>HTML 5 语义化标签</h2>
-        </div>
+      <article class="page_tables fl">
+        <header>
+          <h3>HTML5 语义化标签</h3>
+        </header>
         <div class="article_content">
-          <table class="table_label table_border_1" bordercolor="#aaa" border="1">
-            <h3 class="thead">主体结构化标签</h3>
+          <table class="table_label t1" bordercolor="#aaa" border="1">
+            <thead><h4 class="thead">主体结构化标签</h4></thead>
             <tr>
-                <th class="th_width_20"><strong>标签</strong></th>
-                <th><strong>描述</strong></th>
+                <th class="th_w_20">标签</th>
+                <th>描述</th>
             </tr>
             <tbody>
               <tr>
@@ -84,11 +82,11 @@
               </tr>
             </tbody>
           </table>
-          <table class="table_label table_border_1" bordercolor="#aaa" border="1">
-            <h3 class="thead">非主体结构标签</h3>
+          <table class="table_label t1" bordercolor="#aaa" border="1">
+            <thead><h4 class="thead">非主体结构标签</h4></thead>
             <tr>
-                <th class="th_width_20"><strong>标签</strong></th>
-                <th><strong>描述</strong></th>
+                <th class="th_w_20">标签</th>
+                <th>描述</th>
             </tr>
             <tbody>
               <tr>
@@ -115,17 +113,14 @@
       </article>
     </div>
   </div>
-  <footer>
+  <footer class="footer">
     <div class="fishline"></div>
-    <div class="footer_img animated" id="footer_img"></div>
+    <div class="footer_img"></div>
     <p class="footer_text">
       Hello，I'm CHarlsey. I'm learning HTML.<br>
       Do you want to come with me?
     </p>
   </footer>
-<script type="text/javascript">
-  
-</script>
-<script src="js/myScript.js"></script>
+<script src=""></script>
 </body>
 </html>

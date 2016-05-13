@@ -209,7 +209,6 @@ footer .fishline {
 }
 /******************* function style ********************/
 .animated a:hover {
-  -webkit-transition: color .25s, background .25s, opacity .1s;
   transition: color .25s, background .25s, opacity .1s; 
 }
 .center {

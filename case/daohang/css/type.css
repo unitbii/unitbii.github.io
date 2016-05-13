@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+a img {
+  border: none; 
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+  padding-left: 0.3em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* 功能 */
+.fl {float:left;}
+.fr {float:right;}
+.img img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.transition {transition: all .25s;}
+
+.db {display: block;}
+.dib {display: inline-block;}
+.rel {position:relative;}
+.abs {position:absolute;}
+.ovh {overflow:hidden;}
+.cur {cursor:pointer;}
+/* 调试 */
+.bgr {background-color: red;}
+.bdr {border: 1px solid red;}
+/* 文本 */
+.b{font-weight:bold;}
+.fc_black {color: #000;}
+.fc_777 {color: #777;}
+.fc_purple {color: #7C30A0;}
+.fc_blue {color: #0070C0;}
+.fc_red {color: #f00;}
+.fc_green {color: #00B050;}
+.fc_orange {color: #FF9A26;}
+.fs {font-family:'宋体';}
+.fy {font-family: "Microsoft YaHei";}
+.tdl {text-decoration:underline;}

@@ -1,0 +1,85 @@
+body {
+  color: #333;
+}
+a {
+  color: #28c;
+}
+a:hover {
+  color: #155799; 
+  transition: color .25s, background .5s, opacity .1s;
+}
+/******************* class style ********************/
+.header {
+  background-color: #117e92;
+  background-image: linear-gradient(120deg, #155799, #15935e);
+  color: #fff;
+  text-align: center;
+}
+.site_name {
+  font-weight:bold;
+  font-size: 2.5rem;
+  padding-top: 1em;
+}
+.blog_motto {
+  margin-bottom: 1em;
+  opacity: 0.7;
+}
+.header_nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: .5em 1.5em;
+}
+.header_nav a:hover {
+  background-color: #001920;
+}
+.main {
+  padding: 3em 1% 5em;
+}
+.footer {
+  background-color: #117e92;
+  background-image: linear-gradient(120deg, #155799, #15935e);
+  color: #fff;
+  height: 15em;
+  position: relative;
+}
+.fishline {
+  margin-left: 7.5em;
+  height: 5em;
+  width: 2px;
+  background: #fff;
+}
+.footer_img {
+  background-image: url(../img/1102.jpg);
+  background-position: 0 -40px;
+  background-size: 100%;
+  margin-left: 4em;
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  transition:transform 10s;
+}
+.footer_img:hover {
+  transform: rotate(360deg);
+  transition:transform 1s;
+}
+.footer_text {
+  margin: 1.5em 1em;
+  position: absolute;
+  left: 11em;
+  bottom: 4em;
+}
+/******************** 响应式 **********************/
+.center {
+  width: 800px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1220px) {
+  .center {width: 1120px;}
+}
+@media screen and (max-width: 1220px) and (min-width: 1021px) {
+  .center {width: 1000px;}
+}
+@media screen and (max-width: 800px) {
+  body >* {width: 800px;}
+}

@@ -1,0 +1,125 @@
+.main_content {
+  padding-right: 2%;
+  width: 75%;
+}
+.main_Rside {
+  border-left: 1px solid #999;
+  padding-left: 2%;
+  width: 25%;
+}
+@media screen and (max-width: 1020px) {
+  .main_content {width: 100%; }
+  .main_Rside {display: none; }
+}
+.main_Rside nav h2 {
+  border-bottom: 4px solid #666;
+  font-size: 1.4rem;
+  padding: .2em 0;
+}
+.main_Rside nav a {
+  border-bottom: 1px solid #aaa;
+  color: #666;
+  display: block;
+  font-size: 1.2rem;
+  padding: .3em 1em;
+}
+.main_Rside nav a:hover {
+  color: #28e;
+}
+.aboutMe {
+  background: #116e82;
+  padding: .5em 1em;
+}
+.aboutMe h2 {
+  font-size: 1.3rem;
+  color: #fff;
+}
+.article_title {
+  border-bottom: 1px solid #bbb;
+}
+.article_title h2 {
+  font-size: 1.8rem;
+  border-left: 5px solid #28c;
+  padding: .4em 1.5em;
+}
+.article_title p {
+  float: right;
+  padding: .4rem 1rem;
+}
+.article_directory {
+  padding: 1em 1em 1.5em;
+  float: right;
+  background: #f1f1f1;
+  border:1px solid #ccc;
+  border-radius: 4px;
+}
+.article_directory a{
+  padding-left: 1em;
+  display: block;
+}
+.article_content {
+  padding: 3em 1em;
+  border-bottom: 1px solid #bbb;
+}
+.article_content p {
+  margin: 1em 0;
+}
+.article_content h3 {
+  font-size: 1.8rem;
+  padding: .5em 0;
+  margin: 1em 0;
+  border-bottom: 2px solid #bbb;
+}
+.article_content h4 {
+  color: #555;
+  font-size: 1.2rem;
+  padding: 0 .5em;
+  margin: .5em 0;
+  border-left: 3px solid #28c;
+}
+.article_content code {
+  background: #444;
+  border-radius: 4px;
+  color: #ddd;
+  display: block;
+  font-size: .9rem;
+  font-family: Consolas, Monospace;
+  margin: .5em 0;
+  padding: .5em 1em;
+}
+.article_quote {
+  border-bottom: 1px solid #bbb;
+  color: #666;
+  margin: .5em 1em;
+  padding: .5em 0;
+}
+.article_quote ul {
+  margin-left: 1em;
+}
+.article_important {
+  margin: 2em 0;
+}
+.article_important em {
+  font-size: 30px;
+}
+.article_important strong {
+  font-size: 40px;
+}
+.article_important ul {
+  font-size: 20px;
+  padding-left: 2em;
+}
+.strong_ul >li{
+  font-weight:700;
+  padding:.5em 0;
+}
+.strong_ul ul{
+  padding-left:2em;
+}
+/* skill tree */
+.skill_tree h4{
+  color: #2288CC;
+}
+.skill_tree ul ul{
+  padding-left: 1.5em;
+}

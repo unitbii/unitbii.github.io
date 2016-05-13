@@ -27,7 +27,6 @@ label {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
   font-weight: inherit;
   font-style: inherit;
   font-family: inherit;
@@ -82,15 +81,12 @@ th,
 td {
   margin: 0;
   padding: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-family: inherit;
+  font: inherit;
   font-size: 100%;
   vertical-align: baseline;
 }
 table {
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 0;
   vertical-align: middle;
 }
@@ -100,20 +96,6 @@ td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
-}
-/******************表格边框1px 样式********************/
-.table_border_1 th,
-.table_border_1 td {
-  border-right: 0;
-  border-bottom: 0;
-  border-left: 0;
-}
-.table_border_1 th+th,
-.table_border_1 td+td {
-  border-left: 1px solid #aaa;
-}
-.table_border_1 th {
-  border-top: 0;
 }
 /******************** 功能 样式 **********************/
 .animated {

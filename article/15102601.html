@@ -4,134 +4,148 @@
   <meta charset="utf-8">
   <title>Vultr部署shadowsocks指引</title>
   <meta name="author" content="C.Y" />
-  <meta name="description" content="" />
+  <meta name="description" content="如何在Vultr上部署shadowsocks实例，以及VPS的介绍" />
   <link rel="icon" href="../img/favicon.png">
-  <link rel="stylesheet" type="text/css" href="../css/public_style.css">
-  <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/type.css">
+  <link rel="stylesheet" type="text/css" href="../css/myblog_model.css">
+  <link rel="stylesheet" type="text/css" href="../css/page_article.css">
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="center">
       <h1 class="site_name">Unitbii.GitHub.io</h1>
       <p class="blog_motto">我的静态博客</p>
-      <nav class="header_nav">
-        <a href="../index.html">主页 | Home</a>
-        <a href="article_index.html">文章 | Article</a>
-        <a href="../skill_tree.html">技能树 | Skill Tree</a>
-        <a href="../case/case_index.html">案例 | Case</a>
-      </nav>
     </div>
+    <nav class="header_nav center">
+      <a href="../index.html">主页 | Home</a>
+      <a href="article_index.html">文章 | Article</a>
+      <a href="skill_tree.html">技能树 | Skill Tree</a>
+      <a href="../case/case_index.html">案例 | Case</a>
+    </nav>
   </header>
   <main class="main center row">
     <article class="main_content fl">
-      <div class="article_title row">
+      <header class="article_title row">
         <h2>Vultr部署shadowsocks指引</h2>
         <p>发表于2015.10.26 &nbsp;&nbsp;By <a href="">Charlsey</a></p>
-      </div>
+      </header>
       <div class="article_content">
         <nav class="article_directory">
           <b>文章目录</b>
           <a href="#foreword">1. 前言</a>
           <a href="#chooseVPS">2. 挑选VPS</a>
-          <a href="#vultr">3. vultr翻墙成本</a>
+          <a href="#vultr">3. Vultr翻墙成本</a>
           <a href="#ssserver">4. ss服务端设置</a>
           <a href="#ssclient">5. ss客户端设置</a>
           <a href="#readme">6. 翻墙须读</a>
         </nav>
-        <h3 id="foreword">前言</h3>
-        <p>当我开始学shadowsocks(简称ss)的时候它就被迫关闭了，有点悲伤...好在它被破解之前还能用一段时间，让我们来领略一下这款好用的翻墙工具吧。</p>
-        <div class="article_import">
-          <h4>shadowsocks的特点：</h4>
-          <ul>
-            <li>省电，移动设备首选</li>
-            <li>支持开机自启，断网后无需手动重连</li>
-            <li>支持区分国内外流量，传统VPN看国内网页会变慢</li>
-          </ul>
-        </div>
-        <p>很多人在VPS上部署shadowsocks服务端都遇到了问题，比如我在Vultr上部署shadowsocks时尝试了各种帖子的方法都不行。最后我找到了一个有效的方法，可直接移步<a href="#ssserver">ss服务端设置</a>，或跟随文章了解一些基础知识。</p>
-
-        <h3 id="chooseVPS">挑选VPS</h3>
-        <p>简单介绍一下各个VPS供应商之间的区别。<br><br>
-          常用的VPS供应商有DigitalOcean、搬瓦工(BandwagonHOST)、Linode。<br>
-          搬瓦工是廉价的VPS供应商，年费最低$20，支持淘宝付款。它使用不完全虚拟技术，节点内用户过多或高峰期会挤压资源（信息截至2015.10.26）。<br>
-          另外2个使用完全虚拟技术，CPU是独立的，质量要好一点。DigitalOcean价格适中，Linode最贵。有兴趣的自行搜索吧，我就不多介绍了。<br><br>
-          在此我主要讲一下试用vultr时的体验。<br><br>
-          vultr跟DigitalOcean的档次很相近，按小时或月租收费。亮点是有日本节点（偶尔缺货）。这里的问题是网上有很多优惠活动，需要大家仔细甄别一下。<br>
-          最大的优惠是赠送$50，如果你找到了链接，别高兴的太早。赠送$50不能使用PayPal支付激活，必须使用信用卡。很多帖子介绍如何用使用全球付(虚拟信用卡)，我试了全球付无法在vultr支付激活。不建议大家在此纠结了（浪费了我很多时间）。<br>
-          然后是$20的优惠卷，然而它有30天的时限。而且，在vultr上开多个VPS，需要客服申请。有一种深深的被玩弄的感觉（花钱都这么费劲）……<br>
-          不过我用极其简陋的英语联系了客服，客服就及时给我开了权限，很体贴。这样起码我们能在30天内败坏这20$了，第二个月开始我们就精打细算吧。
-        </p>
-
-        <h3 id="vultr">vultr翻墙成本和ping值</h3>
-        <p>能比vultr还省的只有搬瓦工。<br><br>
-          搬瓦工有优惠的是年付，月付最低是3$，作为一款不完全虚拟技术产品就不那么值了。vultr是完全虚拟技术月租5$，而且有独特的日本节点，线路比洛杉矶要短，确实是不错的选择。<br>
-          再说ping值，网上有测试ping值的节点，试一下看看就算了。真正你创建了自己的VPS你再测自己的地址，实际ping值和丢包率在高峰期是很不稳定的。线路依然越短越好。
-        </p>
-        
-        <h3 id="ssserver">ss服务端设置</h3>
-        <p>我使用的是<a href="https://teddysun.com/392.html/comment-page-2">秋水逸冰（原文链接）</a>的shadowsocks go一键安装脚本：<br>
-          将下述代码复制，在putty中右键（即可粘贴），回车执行即可。</p>
-        <code>wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh<br>
-          chmod +x shadowsocks-go.sh<br>
-          ./shadowsocks-go.sh 2>&1 | tee shadowsocks-go.log
-        </code>
-        <p>
-          这里假设你已经了解了VPS的创建流程，和putty的使用。如不清楚请移步：<a href="http://www.aiirony.com/1398.html">关于这几天测试SS（shadowsocks）的心得和搭建教程</a>，或自行搜索。<br><br>
-          以下为一些关键词<br><br>
-          默认配置：<br>
-          服务器端口：可自定（默认8989）<br>
-          客户端端口：1080<br>
-          密码：可自定（默认为teddysun.com）<br>
-          安装完成后，即后台自启动<br><br>
-          使用命令：<br>
-          启动：/etc/init.d/shadowsocks start<br>
-          停止：/etc/init.d/shadowsocks stop<br>
-          重启：/etc/init.d/shadowsocks restart<br>
-          状态：/etc/init.d/shadowsocks status
-        </p>
-          
-        <h3 id="ssclient">ss客户端设置</h3>
-        <p>这一节我也要无耻的偷懒了。<br>
-          直接推荐一个免费ss帐号：<a href="http://www.ishadowsocks.com/">http://www.ishadowsocks.com/</a><br><br>
-          这里有详尽教程布置ss客户端。操作是一样的，区别只是使用了公共的IP和端口号，弄懂后换成自己的即可。
-        </p>
-        
-        <h3 id="readme">翻墙须读</h3>
-        <p>传统VPN和SS都有被GFW检测的可能，轻则限制流量，重则封停IP。按照容易被检测的顺序是：<br>
+        <section id="foreword">
+          <h3>前言</h3>
+          <p>当我开始学shadowsocks(简称ss)的时候它就被迫关闭了，有点悲伤...好在它被破解之前还能用一段时间，让我们来领略一下这款好用的翻墙工具吧。</p>
+          <blockquote class="article_quote">
+            <h4>shadowsocks的特点：</h4>
+            <ul>
+              <li>省电，移动设备首选</li>
+              <li>支持开机自启，断网后无需手动重连</li>
+              <li>支持区分国内外流量，传统VPN看国内网页会变慢</li>
+            </ul>
+          </blockquote>
+          <p>很多人在VPS上部署shadowsocks服务端都遇到了问题，比如我在Vultr上部署shadowsocks时尝试了各种帖子的方法都不行。最后我找到了一个有效的方法，可直接移步<a href="#ssserver">ss服务端设置</a>，或跟随文章了解一些基础知识。</p>
+        </section>
+        <section id="chooseVPS">
+          <h3>挑选VPS</h3>
+          <p>简单介绍一下各个VPS供应商之间的区别。（以下信息的时间戳为2015.10.26）</p>
+          <p>常用的VPS供应商有DigitalOcean、搬瓦工(BandwagonHOST)、Linode。搬瓦工是廉价的VPS供应商，年费最低$20，支持淘宝付款。它使用不完全虚拟技术，节点内用户过多或高峰期会挤压资源。另外2个使用完全虚拟技术，CPU是独立的，质量要好一点。DigitalOcean价格适中，Linode最贵。有兴趣的自行搜索吧，我就不多介绍了。</p>
+          <p>在此我主要讲一下试用<a href="https://www.vultr.com/"> Vultr </a>时的体验。</p>
+          <p>vultr跟DigitalOcean的档次很相近，按小时或月租收费。亮点是有日本节点（偶尔缺货）。这里的问题是网上有很多优惠活动，需要大家仔细甄别一下。</p>
+          <p>最大的优惠是赠送$50，如果你找到了链接，别高兴的太早。赠送$50不能使用PayPal支付激活，必须使用信用卡。很多帖子介绍如何用使用全球付(虚拟信用卡)，我试了全球付无法在Vultr支付激活。不建议大家在此纠结了（浪费了我很多时间）。然后是$20的优惠卷，然而它有30天的时限。而且，在Vultr上开多个VPS，需要客服申请。有一种深深的被玩弄的感觉（花钱都这么费劲）……</p>
+          <p>不过我用极其简陋的英语联系了客服，客服就及时给我开了权限，很体贴。这样起码我们能在30天内败坏这20$了，第二个月开始我们就精打细算吧。</p>
+        </section>
+        <section id="vultr">
+          <h3>Vultr翻墙成本和ping值</h3>
+          <p>能比Vultr还省的只有搬瓦工。<p>
+          <p>搬瓦工有优惠的是年付，月付最低是3$，作为一款不完全虚拟技术产品就不那么值了。Vultr是完全虚拟技术月租5$，而且有独特的日本节点，线路比洛杉矶要短，确实是不错的选择。</p>
+          <p>再说ping值，网上有测试ping值的节点，试一下看看就算了。真正你创建了自己的VPS你再测自己的地址，实际ping值和丢包率在高峰期是很不稳定的。线路依然越短越好。</p>
+        </section>
+        <section id="ssserver">
+          <h3>ss服务端设置</h3>
+          <p>我使用的是<a href="https://teddysun.com/392.html/comment-page-2">秋水逸冰（原文链接）</a>的shadowsocks go一键安装脚本：</p>
+          <p>将下述代码复制，在putty中右键（即可粘贴），回车执行即可。</p>
+          <code>
+            wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh<br>
+            chmod +x shadowsocks-go.sh<br>
+            ./shadowsocks-go.sh 2>&1 | tee shadowsocks-go.log
+          </code>
+          <p>这里假设你已经了解了VPS的创建流程，和putty的使用。如不清楚请移步：<a href="http://www.aiirony.com/1398.html">关于这几天测试SS（shadowsocks）的心得和搭建教程</a>，或自行搜索。</p>
+          <p>以下为一些关键词</p>
+          <blockquote class="article_quote">
+            <h4>默认配置：</h4>
+            <ul>
+              <li>服务器端口：可自定（默认8989）</li>
+              <li>客户端端口：1080</li>
+              <li>密码：可自定（默认为teddysun.com）</li>
+              <li>安装完成后，即后台自启动</li>   
+            </ul>
+          </blockquote>
+          <blockquote class="article_quote">
+            <h4>使用命令：</h4>
+            <ul>
+              <li>启动：/etc/init.d/shadowsocks start</li>
+              <li>停止：/etc/init.d/shadowsocks stop</li>
+              <li>重启：/etc/init.d/shadowsocks restart</li>
+              <li>状态：/etc/init.d/shadowsocks status</li>
+            </ul>
+          </blockquote>
+        </section>
+        <section id="ssclient">
+          <h3>ss客户端设置</h3>
+          <p>这一节我也要无耻的偷懒了：p</p>
+          <p>直接推荐一个免费ss帐号：<a href="http://www.ishadowsocks.com/">http://www.ishadowsocks.com/</a></p>
+          <p>这里有详尽布置ss客户端的教程。所谓免费ss帐号即是公开了自己的账户密码。所以按以上教程布置好客户端后，换成自己的账户、密码和端口即可。</p>
+        </section>
+        <section id="readme">
+          <h3>翻墙须读</h3>
+          <p>传统VPN和SS都有被GFW检测的可能，轻则限制流量，重则封停IP。按照容易被检测的顺序是：</p>
           <h4>OpenVPN > PPTP > L2TP > IPSec。</h4>
-          尤其是OpenVPN，GFW已经可以实现对其定点清除（同样遭此待遇的还有SSH翻墙）。翻墙手段宜新不宜旧，只搭一个Shadowsocks是最能保证你翻墙效果和服务器稳定的好策略。<br><br>
-          另外一个问题是用户身份。<br><br>
-          Shadowsocks支持一账户多端登陆，而我们所有在墙外显示的IP都是服务器的IP，所以一些帐号在通过服务器进行操作时会出现问题。比如游戏帐号，游戏管理系统若发现同一个帐号短时间内在不同的IP出现（IP距离极大），则被认为是盗号嫌疑而被封停。此类情况会出现在支付等各种场合。<br>
-          同时，Shadowsocks虽然并不占资源，但强烈不建议与重要项目如个人网站等运行在同一空间。若因翻墙使服务器IP被封停，则会影响到整个项目，得不偿失。<br><br>
-          只希望世界上再少一堵墙。
-        </p>
+          <p>尤其是OpenVPN，GFW已经可以实现对其定点清除（同样遭此待遇的还有SSH翻墙）。翻墙手段宜新不宜旧，只搭一个Shadowsocks是最能保证你翻墙效果和服务器稳定的好策略。</p>
+          <p>另外一个问题是用户身份。</p>
+          <p>Shadowsocks支持一账户多端登陆，而我们所有在墙外显示的IP都是服务器（VPS）的IP，所以一些帐号在通过服务器进行操作时会出现问题。比如游戏帐号，游戏管理系统若发现同一个帐号短时间内在不同的IP出现（IP距离极大），则被认为是盗号嫌疑而被封停。此类情况会出现在支付等各种场合。</p>
+          <p>同时，Shadowsocks虽然并不占资源，但强烈不建议与重要项目如个人网站等运行在同一空间。若因翻墙使服务器IP被封停，则会影响到整个项目，得不偿失。</p>
+          <p>只希望世界上再少一堵墙。</p>
+        </section>
       </div>
-      <div>感谢您的阅读。</div>
+      <footer>
+        <p>感谢您的阅读。</p>
+      </footer>
     </article>
-    <aside class="Rside fr">
-      <nav class="Rside_nav">
-        <h2>分类</h2>
+    <aside class="main_Rside fr">
+      <section class="aboutMe">
+        <div>
+          <img src="">
+        </div>
+        <h2>关于我：</h2>
+      </section>
+      <nav class="logSort">
+        <h2>日志列表</h2>
         <a href="">前端 | Front-end</a>
         <a href="">学习 | Study</a>
         <a href="">生活 | Life</a>
         <a href="">软件 | Soft</a>
       </nav>
-      <nav class="Rside_nav">
+      <nav class="Blogroll">
         <h2>友情链接</h2>
-        <a href=""></a>
+        <a href="">HelloNico 助力WEB学习</a>
         <a href=""></a>
         <a href=""></a>
       </nav>
-      <div class="visitorStatistics">
-        <h2>访客 : </h2>
-      </div>
     </aside>
   </main>
-  <footer>
+  <footer class="footer">
     <div class="fishline"></div>
-    <div class="footer_img animated" id="footer_img"></div>
+    <div class="footer_img animated"></div>
     <p class="footer_text">
-      Hello，I'm CHarlsey. I'm learning HTML.<br>
+      Hello，I'm Charlsey. I'm learning HTML.<br>
       Do you want to come with me?
     </p>
   </footer>

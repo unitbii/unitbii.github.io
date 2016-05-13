@@ -1,0 +1,33 @@
+/* 功能 */
+.fl {float:left;}
+.fr {float:right;}
+.img img {
+	display: block;
+	width: 100%;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.ta {transition: all .25s;}
+
+.rel {position:relative;}
+.abs {position:absolute;}
+.ovh {overflow:hidden;}
+.cur {cursor:pointer;}
+
+/* 调试 */
+.bgr {background-color: red;}
+.bdr {border: 1px solid red;}
+/* 文本 */
+.b{font-weight:bold;}
+.fc_black {color: #000; }
+.fc_777 {color: #777; }
+.fc_purple {color: #7C30A0; }
+.fc_blue {color: #0070C0; }
+.fc_red {color: #f00; }
+.fc_green {color: #00B050; }
+.fc_orange {color: #FF9A26; }
+.fs {font-family:'宋体';}
+.tdl {text-decoration:underline;}

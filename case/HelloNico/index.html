@@ -6,11 +6,15 @@
   <meta name="author" content="C.Y" />
   <meta name="description" content="HelloNico是一个学习作品。" />
   <link rel="icon" href="img/favicon.png" />
-  <link rel="stylesheet" type="text/css" href="css/public_style.css">
-  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/type.css">
+  <link rel="stylesheet" type="text/css" href="css/table.css">
+  <link rel="stylesheet" type="text/css" href="css/HelloNico_model.css">
+  <link rel="stylesheet" type="text/css" href="css/page_table.css">
+  <link rel="stylesheet" type="text/css" href="css/page_home.css">
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="header_top">
       <div class="center">
         <a class="textlogo" href="index.html" title="HelloNico">
@@ -19,7 +23,7 @@
         <p class="blog-motto">助力web前端学习</p>
       </div>
     </div>
-    <nav class="header_nav animated center">
+    <nav class="header_nav center">
       <a href="index.html">首页</a>
       <a href="html_label.html">HTML/CSS</a>
       <a href="">JavaScript</a>
@@ -33,46 +37,47 @@
     <hr/>
   </header>
   <main class="main">
-    <div class="main-title center">前端学习规划</div>
-    <div class="main-body center">
+    <h2 class="main_title center">前端学习规划</h2>
+    <div class="main_body center">
       <div class="code">实践是检验真知的唯一标准。</div>
       <div class="row">
         <ul class="code_gray fl">
-          <h3>网站</h3>
+          <h4>网站</h4>
           <li>1、维护自己的个人博客</li>
           <li>2、维护web学习网站</li>
           <li>3、在学习JQuery、Angular等工具后，对博客架构进行翻新。</li>
         </ul>
         <ul class="code_gray fl">
-          <h3>Javascript</h3>
+          <h4>Javascript</h4>
           <li>1、学习JQuery库</li>
           <li>2、学习Angular前端框架</li>
           <li>3、学习Yeoman：前端工作流程事实的标准</li>
           <li>4、学习Bootstrap/Fonadtion：CSS框架</li>
         </ul>
-        <section class="code_gray fl" style="line-height:1.8;">
-          <h3 >第二阶段规划：</h3>
-          <ul style="font-size:16px;padding-left:1em;">
-            <li style="font-weight:700;padding:.5em 0;">1、总结和回顾<span style="">HTML/CSS/JacaScript基础</span>。</li>
-            <ul style="padding-left:2em;">
-              <li>1.1、总结和回顾<span style="">H5/CSS3知识点</span>。</li>
+        <section class="code_gray fl">
+          <h4>第二阶段规划：</h4>
+          <ul class="strong_ul">
+            <li class="fc_blue">0、将以下知识点整理成笔记</li>
+            <li>1、总结和回顾<em class="fc_blue">HTML/CSS/JacaScript基础</em>。</li>
+            <ul>
+              <li>1.1、总结和回顾<em class="fc_blue">H5/CSS3知识点</em>。</li>
             </ul>
-            <li style="font-weight:700;padding:.5em 0;">2、通读<a href="http://ued.taobao.org/blog/category/bowen/frontend/page/4/" target="_blank" style="color:#499;"> 淘宝网UED官方博客 </a>等前端文章、博文。</li>
-            <ul style="padding-left:2em;">
-              <li>2.1、浏览前端招聘信息对<span style="">前端职责</span>与<span style="">技能需求</span>的描述。</li>
+            <li>2、通读<a href="http://ued.taobao.org/blog/category/bowen/frontend/page/4/" target="_blank"> 淘宝网UED官方博客 </a>等前端文章、博文。</li>
+            <ul>
+              <li>2.1、浏览前端招聘信息对<span class="fc_red">前端职责</span>与<span class="fc_red">技能需求</span>的描述。</li>
             </ul>
-            <li style="font-weight:700;padding:.5em 0;">3、通过文章了解<span style="">前端理念</span>和<span style="">发展趋势</span>。
+            <li>3、通过文章了解<span class="fc_green">前端理念</span>和<span class="fc_orange">发展趋势</span>。
             </li>
-            <ul style="padding-left:2em;">
-              <li>3.1、理解前端开发理念，清晰理念的意义：<span style="">敏捷开发、渐进增强、CSS库策略</span>。</li>
-              <li>3.2、了解各种<span style="">符合趋势</span>的技术/框架。</li>
-              <ul style="padding-left:1em;">
-                <li>3.2.1、了解这些技术/框架的<span style="">应用场景</span>（为什么要使用这些技术）。</li>
-                <li>3.2.2、了解同类技术/框架中不同的<span style="">适用场合</span>（这些框架各有怎样的优势和缺点）。</li>
+            <ul>
+              <li>3.1、理解前端开发理念，清晰理念的意义：<span class="fc_green">敏捷开发、渐进增强、CSS库策略</span>。</li>
+              <li>3.2、了解各种<span class="fc_orange">符合趋势</span>的技术/框架。</li>
+              <ul>
+                <li>3.2.1、了解这些技术/框架的<span class="fc_blue">应用场景</span>（为什么要使用这些技术）。</li>
+                <li>3.2.2、了解同类技术/框架中不同的<span class="fc_blue">适用场合</span>（这些框架各有怎样的优势和缺点）。</li>
               </ul>
             </ul>
-            <li style="font-weight:700;padding:.5em 0;">4、以<span style="">前端理念</span>为指导，在<span style="">符合趋势</span>的技术/框架中，选择<span style="">符合当前需求</span>的技术进行学习。</li>
-              <ul style="padding-left:2em;">
+            <li>4、以<span class="fc_green">前端理念</span>为指导，在<span class="fc_orange">符合趋势</span>的技术/框架中，选择<span class="fc_red">符合当前需求</span>的技术进行学习。</li>
+              <ul>
                 <li>4.1、JS库：JQuery；</li>
                 <li>4.2、JS框架：AngularJS；</li>
                 <li>4.3、CSS框架：Bootstrap/Foundation；</li>
@@ -83,16 +88,14 @@
       </div>
     </div>
   </main>
-  <footer>
+  <footer class="footer">
     <div class="fishline"></div>
-    <div class="footer_img animated" id="footer_img"></div>
+    <div class="footer_img"></div>
     <p class="footer_text">
       Hello，I'm CHarlsey. I'm learning HTML.<br>
       Do you want to come with me?
     </p>
   </footer>
-<script type="text/javascript">
-</script>
-<script src="js/myScript.js"></script>
+<script src=""></script>
 </body>
 </html>

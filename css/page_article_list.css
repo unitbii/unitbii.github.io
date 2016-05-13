@@ -1,0 +1,33 @@
+.article_option {
+  height: 8em;
+  margin: .5em 0 2em;
+}
+.article_img {
+  float: left;
+  height: 100%;
+  width: 9em;
+  opacity: 0.8;
+  overflow: hidden;
+  position: relative;
+}
+.article_img:hover {
+  opacity: 1;
+}
+.article_img img {
+  position: absolute;
+  bottom:0;
+}
+.article_information {
+  float: left;
+  line-height: 2.5em;
+  margin-left: 1.5em;
+}
+.article_information h2 {
+  font-size: 1.4rem;
+}
+.article_information h2:hover {
+  color: #155799;
+}
+.article_introduce {
+  color: #777;
+}

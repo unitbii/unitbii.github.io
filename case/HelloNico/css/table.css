@@ -1,0 +1,30 @@
+td, th {
+  padding: .2em .4em;
+}
+table {
+  margin: 0 auto;
+}
+.thead {
+  text-align: center;
+}
+/* table */
+.table_label {width: 80%;}
+.table_css {width: 90%;}
+.table_charE {width: 50%;}
+/* th */
+.t1 th {
+  color: #333;
+  background: #ccc;
+}
+.t2 th {
+  color: #fff;
+  background: #555;
+}
+.th_w_20 {width: 20%;}
+.th_w_25 {width: 25%;}
+.th_w_30 {width: 30%;}
+.th_w_40 {width: 40%;}
+/* tr */
+.tr_bg_even tr:nth-child(even) {
+  background: #e1e1e1;
+}

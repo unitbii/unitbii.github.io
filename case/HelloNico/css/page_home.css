@@ -1,0 +1,34 @@
+.strong_ul >li{
+  font-weight:700;
+  padding:.5em 0;
+}
+.strong_ul ul{
+  padding-left:2em;
+}
+/******************* 框体样式 ********************/
+.code {
+  font-family: courier, "Courier New";
+  border: 1px solid #888;
+  border-radius: 5px;
+  background: #385062;
+  color: #fff;
+  padding: 1em;
+  display: block;
+}
+.code h3 {
+  color: #fff;
+  font-size: 1.3em;
+  padding: .2em;
+}
+.code_gray {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background: #e1e1e1;
+  color: #666;
+  margin: 1em 2em 1em 0;
+  padding: .5em 1.5em .5em 1em;
+}
+.code_gray h3{
+  font-size: 1.3em;
+  padding: .2em;
+}

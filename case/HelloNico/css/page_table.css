@@ -1,0 +1,40 @@
+.main h3 {
+  color: #28c;
+  opacity: 0.7;
+  border-left: 4px solid #68c;
+  font-size: 1.7rem;
+  padding: .2em .6em;
+}
+.main h4 {
+  color: #28c;
+  font-size: 1.5rem;
+  padding: .5em 0;
+}
+.main_title {
+  border-bottom: 1px solid #ccc;
+  font-size: 3rem;
+  padding: 1em 0 0;
+}
+.main_body {
+  padding: 2em 0;
+}
+.Lside {
+  width: 16%;
+}
+.Lside >a {
+  color: #888;
+  display: block;
+  font-size: 1.3rem;
+  padding: .1em .4em;
+}
+.Lside >a:hover {
+  color: #000;
+  background: #ccc;
+}
+.page_tables {
+  border-left: 1px solid #ccc;
+  width: 84%;
+}
+.article_content {
+  padding: 1em;
+}
